@@ -3,15 +3,19 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Race_Track</title>
+    <title>@ViewData["Title"] - Race Track  </title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Race_Track.styles.css" asp-append-version="true" />
+    <link rel="icon" type="images/ico" href="Plane.ico"> 
+    <link rel="shortcut icon" href="/Images/Plane.ico">
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
+                @* <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="http://cdn.onlinewebfonts.com/svg/img_10618.png" alt="Arg" height="50" width="100">  </a> *@
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.--kgAVyi_CQiIzrekG76WwHaHa%26pid%3DApi&f=1&ipt=6af2e9696f942b456e60ad1ffc490f188c3d4123492fbf6404e5307bbb5935cc&ipo=images" alt="Arg" height="50" width="100">  </a>                
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Race_Track</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -20,11 +24,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Instructor" asp-action="Index">Pilotos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Aeronave" asp-action="Index">Vehiculos</a>
+                        </li>    
                     </ul>
                 </div>
             </div>
@@ -38,7 +42,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - Race_Track - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+             <p>&copy; 2023 - Jorge Daniel Olivera</p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
