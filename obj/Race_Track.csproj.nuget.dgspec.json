@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj": {}
+    "c:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj": {}
   },
   "projects": {
-    "C:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj": {
+    "c:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj",
+        "projectUniqueName": "c:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj",
         "projectName": "Race_Track",
-        "projectPath": "C:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj",
+        "projectPath": "c:\\Users\\olive\\RepoIstea\\Race_Track\\Race_Track.csproj",
         "packagesPath": "C:\\Users\\olive\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\olive\\RepoIstea\\Race_Track\\obj\\",
+        "outputPath": "c:\\Users\\olive\\RepoIstea\\Race_Track\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\olive\\AppData\\Roaming\\NuGet\\NuGet.Config",
