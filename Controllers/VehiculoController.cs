@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Race_Track.Data;
 using Race_Track.Models;
+using Race_Track.ViewModels;
 
 namespace Race_Track.Controllers
 {
@@ -20,11 +21,22 @@ namespace Race_Track.Controllers
         }
 
         // GET: Vehiculo
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string nameFilter , VehiculoIndexViewModel vehiculoView)
         {
-              return _context.Vehiculo != null ? 
-                          View(await _context.Vehiculo.ToListAsync()) :
-                          Problem("Entity set 'VehiculoContext.Vehiculo'  is null.");
+            var query = from vehiculo in _context.Vehiculo select vehiculo;
+
+            if (!string.IsNullOrEmpty(nameFilter))
+            {
+                query = query.Where(x => x.VehiculoNombre.Contains(nameFilter) || x.VehiculoMatricula.Contains(nameFilter));
+                // query = query.Where(x => x.VehiculoNombre.Contains(nameFilter));
+            }
+
+            var model = new VehiculoIndexViewModel();
+            model.vehiculos =await query.ToListAsync();
+            
+            return _context.Vehiculo != null ?
+            View(model):
+            Problem("Entity set 'AeronaveContex.Aeronave' is null.");
         }
 
         // GET: Vehiculo/Details/5

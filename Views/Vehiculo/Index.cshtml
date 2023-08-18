@@ -1,4 +1,6 @@
-@model IEnumerable<Race_Track.Models.Vehiculo>
+@* @model IEnumerable<Race_Track.Models.Vehiculo> *@
+@using Race_Track.ViewModels;
+@model VehiculoIndexViewModel;
 
 @{
     ViewData["Title"] = "Index";
@@ -9,6 +11,17 @@
 <p>
     <a asp-action="Create" class="btn btn-success">+ Vehiculo</a>
 </p>
+
+<div class="row">
+    <form method="get" asp-action="Index" asp-controller="Vehiculo">
+        <div class="col-6 form-group">
+            <input class="form-control" asp-for="NameFilter"/>
+        </div>
+        <br>
+        <button class="btn btn-info" type="submit">Buscar</button>
+    </form>
+</div>
+
 <table class="table">
     <thead>
         <tr>
@@ -31,7 +44,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.vehiculos) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.VehiculoNombre)

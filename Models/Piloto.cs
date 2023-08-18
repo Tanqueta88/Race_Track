@@ -30,10 +30,8 @@ namespace Race_Track.Models
         [Display(Name = "Es propietario?")]        
 
         public bool PilotoPropietario {get;set;} = true;       
-
-        public int VehiculoId { get; set; }
-        [Display(Name = "Vehiculo")]           
-
+        [Display(Name = "Vehiculo asignado")]
+        public int VehiculoId { get; set; }          
         public virtual Vehiculo? Vehiculo { get; set; }        
     }
 }

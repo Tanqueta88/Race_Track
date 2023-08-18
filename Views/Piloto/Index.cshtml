@@ -9,7 +9,7 @@
 <h1>Pilotos</h1>
 
 <p>
-    <a asp-action="Create" class="btn btn-success">+ Vehiculo</a>
+    <a asp-action="Create" class="btn btn-success">+ Piloto</a>
 </p>
 
 <div class="row">
@@ -74,9 +74,9 @@
                 @Html.DisplayFor(modelItem => item.Vehiculo.VehiculoTipo)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.VehiculoId"class="btn btn-warning">Modificar</a> 
-                <a asp-action="Details" asp-route-id="@item.VehiculoId" class="btn btn-primary">Detalle</a> 
-                <a asp-action="Delete" asp-route-id="@item.VehiculoId"  class="btn btn-danger" onclick="return confirm('¿Esta seguro que quiere eliminar este instructor?')">Eliminar</a>
+                <a asp-action="Edit" asp-route-id="@item.PilotoId"class="btn btn-warning">Modificar</a> 
+                <a asp-action="Details" asp-route-id="@item.PilotoId" class="btn btn-primary">Detalle</a> 
+                <a asp-action="Delete" asp-route-id="@item.PilotoId"  class="btn btn-danger" onclick="return confirm('¿Esta seguro que quiere eliminar este instructor?')">Eliminar</a>
             </td>
         </tr>
 }

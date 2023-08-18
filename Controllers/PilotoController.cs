@@ -21,7 +21,7 @@ namespace Race_Track.Controllers
         }
 
         // GET: Piloto
-        public async Task<IActionResult> Index(string nameFilter ,[Bind("AeronaveTipo,AeronaveFabricacion")] PilotoIndexViewModel pilotoView)
+        public async Task<IActionResult> Index(string nameFilter , PilotoIndexViewModel pilotoView)
         {
             var query = from piloto in _context.Piloto select piloto;
 
@@ -94,7 +94,8 @@ namespace Race_Track.Controllers
             {
                 return NotFound();
             }
-            ViewData["VehiculoId"] = new SelectList(_context.Vehiculo, "VehiculoId", "VehiculoId", piloto.VehiculoId);
+            // ViewData["VehiculoId"] = new SelectList(_context.Vehiculo, "VehiculoTipo", "VehiculoTipo", piloto.VehiculoId);
+            ViewData["VehiculoId"] = new SelectList(_context.Vehiculo, "VehiculoId", "VehiculoTipo");
             return View(piloto);
         }
 
