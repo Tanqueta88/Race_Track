@@ -27,7 +27,7 @@ namespace Race_Track.Controllers
 
             if (!string.IsNullOrEmpty(nameFilter))
             {
-                query = query.Where(x => x.VehiculoNombre.Contains(nameFilter) || x.VehiculoMatricula.Contains(nameFilter));
+                query = query.Where(x => x.VehiculoNombre.Contains(nameFilter) || x.VehiculoApellido.Contains(nameFilter) || x.VehiculoMatricula.Contains(nameFilter));
                 // query = query.Where(x => x.VehiculoNombre.Contains(nameFilter));
             }
 

@@ -21,9 +21,10 @@ namespace Race_Track.Controllers
         }
 
         // GET: Piloto
-        public async Task<IActionResult> Index(string nameFilter , PilotoIndexViewModel pilotoView)
+        // public async Task<IActionResult> Index(string nameFilter , PilotoIndexViewModel pilotoView)
+        public async Task<IActionResult> Index(string nameFilter)
         {
-            var query = from piloto in _context.Piloto select piloto;
+            var query = from piloto in _context.Piloto.Include(i => i.Vehiculo) select piloto;
 
             if (!string.IsNullOrEmpty(nameFilter))
             {
@@ -32,10 +33,11 @@ namespace Race_Track.Controllers
 
             var model = new PilotoIndexViewModel();
             model.pilotos =await query.ToListAsync();
-            
+
             return _context.Piloto != null ?
             View(model):
             Problem("Entity set 'AeronaveContex.Aeronave' is null.");
+
         }
 
         // GET: Piloto/Details/5
